@@ -372,51 +372,51 @@
                                         <form>
                                             <div class="name" style="width: 100%;height: 43px;">
                                                 <div style="position: relative;padding-bottom: 5px">
-                                                    <label style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
+                                                    <label id="name" style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
                                                         称呼
                                                     </label>
                                                     <div style="width: 100%;height: 100%">
-                                                        <input type="text" style="width: 100%;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;;">
+                                                        <input id="inp" type="text" style="width: 100%;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;;">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="name" style="width: 100%;height: 43px;">
                                                 <div style="position: relative;padding-bottom: 5px">
-                                                    <label style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
+                                                    <label id="name" style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
                                                         邮箱
                                                     </label>
                                                     <div style="width: 100%;height: 100%">
-                                                        <input type="text" style="width: 100%;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;;">
+                                                        <input id="inp" type="text" style="width: 100%;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;;">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="name" style="width: 100%;height: 43px;">
                                                 <div style="position: relative;padding-bottom: 5px">
-                                                    <label style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
+                                                    <label id="name" style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
                                                         电话
                                                     </label>
                                                     <div style="width: 100%;height: 100%">
-                                                        <input type="text" style="width: 100%;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;;">
+                                                        <input id="inp" type="text" style="width: 100%;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;;">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="name" style="width: 320px;height: 43px;position: relative;">
                                                 <div style="position: relative;padding-bottom: 5px">
-                                                    <label style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
+                                                    <label id="name" style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
                                                         内容
                                                     </label>
                                                     <div style="width: 100%;height: 100%">
-                                                        <textarea type="text" style="height: 62px;background-color: rgb(252, 252, 252);border: 1px solid rgb(219, 219, 219);font-size: 14px;width: 100%;line-height: 1.4;"></textarea>
+                                                        <textarea id="inp" type="text" style="height: 62px;background-color: rgb(252, 252, 252);border: 1px solid rgb(219, 219, 219);font-size: 14px;width: 100%;line-height: 1.4;"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="name" style="width: 320px;height: 43px;position: relative;top:30px;">
                                                 <div style="position: relative;padding-bottom: 5px">
-                                                    <label style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
+                                                    <label id="name" style="display: inline-block;position: absolute;float: left;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;margin-left: 5px;padding: 0;">
                                                         验证码
                                                     </label>
                                                     <div style="width: 100%;height: 100%">
-                                                        <input type="text" style="width: 100%;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;;">
+                                                        <input id="inp" type="text" style="width: 100%;color: rgb(89, 89, 89);font-size: 12px;line-height:35px;margin-top:0;;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -481,7 +481,50 @@
         stop2.style.top=0+"px"
         stop2.style.opacity=1
 
-    },3000)
+    },3000);
+
+    var down=document.querySelectorAll(".name #inp")
+    var change=document.querySelectorAll("#name")
+
+    for (let i=0;i<down.length;i++) {
+
+
+        down[i].onfocus = function () {
+            // console.log(i)
+            // alert(1)
+            // icons[i].style.background = "rgb(38,38,38)"
+            // for (let j=0;j<change.length;j++) {
+
+            // alert(1)
+            change[i].style.opacity = 0.5;
+            // }
+            // console.log(change[j])
+
+
+
+        }
+        down[i].onblur=function () {
+
+            // for (let j=0;j<change.length;j++) {
+
+
+            change[i].style.opacity = 1;
+            // }
+
+
+
+
+        }
+
+
+        // icons[i].onmouseout=function () {
+        //     icons[i].style.background="#000"
+        //
+        // }
+
+
+        // down.focus();
+    }
 
 </script>
 

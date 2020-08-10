@@ -855,6 +855,7 @@ section.section:not(.overflowauto) {
     /*left: 10px;*/
 }
 
+
 @keyframes qfyfadeInLeft {
     from {left:160px;opacity: 0}
     to {left:0px;opacity: 1}
